@@ -44,7 +44,7 @@ func (p *Product) Validate() error {
 		return ErrIDIsRequired
 	}
 
-	if _, err := entity.ParseId(p.ID.String()); err != nil {
+	if _, err := entity.ParseID(p.ID.String()); err != nil {
 		return ErrInvalidId
 	}
 
